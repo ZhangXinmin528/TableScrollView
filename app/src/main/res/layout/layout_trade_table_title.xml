@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dp_10"
+    android:paddingLeft="@dimen/dp_12"
+    android:paddingRight="@dimen/dp_12"
+    android:paddingTop="@dimen/dp_10">
+
+    <!--市值-->
+    <TextView
+        android:id="@+id/tv_trade_operation_market"
+        android:layout_width="@dimen/trade_table_item_width"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="@string/trade_all_market_value"
+        android:textColor="@android:color/black" />
+
+    <com.example.tablescrollview_master.view.SimpleLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_2"
+        android:layout_marginStart="@dimen/dp_2"
+        android:layout_toEndOf="@+id/tv_trade_operation_market"
+        android:layout_toRightOf="@+id/tv_trade_operation_market"
+        android:focusable="false"
+        android:orientation="horizontal">
+
+        <com.example.tablescrollview_master.view.TableScrollView
+            android:id="@+id/table_trade_operation_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:focusable="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!--盈亏-->
+                <TextView
+                    android:layout_width="@dimen/trade_table_item_width"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/trade_clear_profit"
+                    android:textColor="@android:color/black"
+                    tools:ignore="RtlHardcoded" />
+                <!--持仓 可用-->
+                <TextView
+                    android:layout_width="@dimen/trade_table_item_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_2"
+                    android:layout_marginStart="@dimen/dp_2"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/trade_all_positions_avaiable"
+                    android:textColor="@android:color/black"
+                    tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                <!--成本 现价-->
+                <TextView
+                    android:layout_width="@dimen/trade_table_item_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_2"
+                    android:layout_marginStart="@dimen/dp_2"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/trade_all_cost_price"
+                    android:textColor="@android:color/black"
+                    tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                <!--当日盈亏-->
+                <TextView
+                    android:layout_width="@dimen/trade_table_item_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_2"
+                    android:layout_marginStart="@dimen/dp_2"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/trade_all_curr_profit_loss"
+                    android:textColor="@android:color/black"
+                    tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                <!--个股仓位-->
+                <TextView
+                    android:layout_width="@dimen/trade_table_item_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_2"
+                    android:layout_marginStart="@dimen/dp_2"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/trade_all_stock_position"
+                    android:textColor="@android:color/black"
+                    tools:ignore="RtlHardcoded,RtlSymmetry" />
+            </LinearLayout>
+
+        </com.example.tablescrollview_master.view.TableScrollView>
+    </com.example.tablescrollview_master.view.SimpleLinearLayout>
+</RelativeLayout>

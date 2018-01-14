@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingBottom="@dimen/dp_10"
+    android:paddingTop="@dimen/dp_10">
+
+    <LinearLayout
+        android:id="@+id/layout_table_item_head"
+        android:layout_width="@dimen/trade_table_item_width"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+        <!--name-->
+        <TextView
+            android:id="@+id/tv_operation_table_name"
+            android:layout_width="@dimen/trade_table_item_width"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:text="北方稀土"
+            android:textColor="@color/trade_color_stock_red" />
+        <!--市值-->
+        <TextView
+            android:id="@+id/tv_operation_table_market"
+            android:layout_width="@dimen/trade_table_item_width"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:text="4548.000"
+            android:textColor="@color/trade_color_stock_red" />
+    </LinearLayout>
+
+    <com.example.tablescrollview_master.view.SimpleLinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_2"
+        android:layout_marginStart="@dimen/dp_2"
+        android:layout_toEndOf="@+id/layout_table_item_head"
+        android:layout_toRightOf="@+id/layout_table_item_head"
+        android:focusable="false"
+        android:orientation="horizontal">
+
+        <com.example.tablescrollview_master.view.TableScrollView
+            android:id="@+id/table_trade_operation_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <!--盈亏-->
+                <LinearLayout
+                    android:layout_width="@dimen/trade_table_item_width"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!--值-->
+                    <TextView
+                        android:id="@+id/tv_operation_table_total_profit"
+                        android:layout_width="@dimen/trade_table_item_width"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical|right"
+                        android:lines="1"
+                        android:text="-83.090"
+                        android:textColor="@color/trade_color_stock_red"
+                        tools:ignore="RtlHardcoded" />
+                    <!--比例-->
+                    <TextView
+                        android:id="@+id/tv_operation_table_total_profit_ratio"
+                        android:layout_width="@dimen/trade_table_item_width"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical|right"
+                        android:lines="1"
+                        android:text="-1.921%"
+                        android:textColor="@color/trade_color_stock_red"
+                        tools:ignore="RtlHardcoded" />
+                </LinearLayout>
+                <!--持仓 可用-->
+                <LinearLayout
+                    android:layout_width="@dimen/trade_table_item_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_2"
+                    android:layout_marginStart="@dimen/dp_2"
+                    android:orientation="vertical">
+                    <!--持仓-->
+                    <TextView
+                        android:id="@+id/tv_operation_table_position"
+                        android:layout_width="@dimen/trade_table_item_width"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical|right"
+                        android:lines="1"
+                        android:text="300"
+                        android:textColor="@color/trade_color_stock_red"
+                        tools:ignore="RtlHardcoded" />
+                    <!--可用-->
+                    <TextView
+                        android:id="@+id/tv_operation_table_position_avai"
+                        android:layout_width="@dimen/trade_table_item_width"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical|right"
+                        android:lines="1"
+                        android:text="0"
+                        android:textColor="@color/trade_color_stock_red"
+                        tools:ignore="RtlHardcoded" />
+                </LinearLayout>
+
+                <!--成本 现价-->
+                <LinearLayout
+                    android:layout_width="@dimen/trade_table_item_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_2"
+                    android:layout_marginStart="@dimen/dp_2"
+                    android:orientation="vertical">
+                    <!--成本-->
+                    <TextView
+                        android:id="@+id/tv_operation_table_cost"
+                        android:layout_width="@dimen/trade_table_item_width"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical|right"
+                        android:lines="1"
+                        android:text="15.477"
+                        android:textColor="@color/trade_color_stock_red"
+                        tools:ignore="RtlHardcoded" />
+                    <!--现价-->
+                    <TextView
+                        android:id="@+id/tv_operation_table_curr_price"
+                        android:layout_width="@dimen/trade_table_item_width"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical|right"
+                        android:lines="1"
+                        android:text="15.200"
+                        android:textColor="@color/trade_color_stock_red"
+                        tools:ignore="RtlHardcoded" />
+                </LinearLayout>
+
+                <!--当日盈亏-->
+                <LinearLayout
+                    android:layout_width="@dimen/trade_table_item_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_2"
+                    android:layout_marginStart="@dimen/dp_2"
+                    android:orientation="vertical">
+                    <!--当日盈亏-->
+                    <TextView
+                        android:id="@+id/tv_operation_table_curr_profit"
+                        android:layout_width="@dimen/trade_table_item_width"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical|right"
+                        android:lines="1"
+                        android:text="-73.000"
+                        android:textColor="@color/trade_color_stock_red"
+                        tools:ignore="RtlHardcoded" />
+                    <!--盈亏比例-->
+                    <TextView
+                        android:id="@+id/tv_operation_table_curr_profit_ratio"
+                        android:layout_width="@dimen/trade_table_item_width"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical|right"
+                        android:lines="1"
+                        android:text="-1.576%"
+                        android:textColor="@color/trade_color_stock_red"
+                        tools:ignore="RtlHardcoded" />
+                </LinearLayout>
+
+                <!--个股仓位-->
+                <TextView
+                    android:id="@+id/tv_operation_table_position_level"
+                    android:layout_width="@dimen/trade_table_item_width"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical|right"
+                    android:lines="1"
+                    android:text="@string/trade_all_stock_position"
+                    android:textColor="@color/trade_color_stock_red"
+                    tools:ignore="RtlHardcoded" />
+            </LinearLayout>
+
+        </com.example.tablescrollview_master.view.TableScrollView>
+    </com.example.tablescrollview_master.view.SimpleLinearLayout>
+</RelativeLayout>

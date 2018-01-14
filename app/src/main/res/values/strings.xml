@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TableScrollView-Master</string>
+
+    <string name="trade_all_market_value">市值</string>
+    <string name="trade_clear_profit">盈亏</string>
+    <string name="trade_all_cost_price">成本/现价</string>
+    <string name="trade_all_curr_profit_loss">当日盈亏</string>
+    <string name="trade_all_positions_avaiable">持仓/可用</string>
+    <string name="trade_all_stock_position">个股仓位</string>
+</resources>
